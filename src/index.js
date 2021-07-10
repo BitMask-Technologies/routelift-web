@@ -6,10 +6,6 @@ import MainRoutes from "./routes";
 import "../node_modules/locomotive-scroll/dist/locomotive-scroll.css";
 import "./assets/css/tailwind.css";
 
-import LocomotiveScroll from "locomotive-scroll";
-
-const scroll = new LocomotiveScroll();
-
 ReactDOM.render(
   <React.StrictMode>
     <MainRoutes />
