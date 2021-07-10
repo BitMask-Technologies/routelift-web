@@ -1,0 +1,43 @@
+/* TempOwn Default Settings */
+:root {
+  /*Default  Color */
+  --color-primary: #540072;
+  --color-secondary: #ff9900;
+}
+
+@tailwind base;
+@tailwind components;
+
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Airbnb Cereal App";
+    font-weight: 300;
+    src: url(../fonts/AirbnbCerealLight.ttf);
+  }
+
+  @font-face {
+    font-family: "Airbnb Cereal App";
+    font-weight: 400;
+    src: url(../fonts/AirbnbCerealBook.ttf);
+  }
+
+  @font-face {
+    font-family: "Airbnb Cereal App";
+    font-weight: 500;
+    src: url(../fonts/AirbnbCerealMedium.ttf);
+  }
+  @font-face {
+    font-family: "Airbnb Cereal App";
+    font-weight: 600;
+    src: url(../fonts/AirbnbCerealBold.ttf);
+  }
+  @font-face {
+    font-family: "Airbnb Cereal App";
+    font-weight: 800;
+    src: url(../fonts/AirbnbCerealExtraBold.ttf) ;
+  }
+}
+
+@import "./main.css";
