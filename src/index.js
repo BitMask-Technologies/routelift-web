@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import reportWebVitals from "./reportWebVitals";
 import MainRoutes from "./routes";
 
-import "../node_modules/locomotive-scroll/dist/locomotive-scroll.css";
 import "./assets/css/tailwind.css";
 
 ReactDOM.render(
