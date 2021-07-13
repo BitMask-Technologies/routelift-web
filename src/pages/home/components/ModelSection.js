@@ -33,7 +33,7 @@ const Grid = ({title, list, bgColor, isSmile, titleColor}) => {
       </div>
       <div className="space-y-10 md:space-y-14">
         {list?.map((a, index) => (
-          <Animate.Fade left={!isSmile && true} right={isSmile && true}>
+          <Animate.Fade key={index} left={!isSmile && true} right={isSmile && true}>
             <Card key={index} value={a} isSmile={isSmile} />
           </Animate.Fade>
         ))}
@@ -76,12 +76,14 @@ const ModelSection = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 md:px-4 lg:px-6 lg:gap-6">
           <Grid
+            key={1}
             title="The Traditional Way"
             list={leftList}
             isSmile={false}
             titleColor="text-black"
           />
           <Grid
+            key={2}
             title="The RouteLift Way"
             list={rightList}
             bgColor=" bg-primary model-left-bg text-white"

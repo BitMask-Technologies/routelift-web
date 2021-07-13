@@ -1,5 +1,4 @@
 import React, {useEffect} from "react";
-import $ from "jquery";
 
 const Card = ({title, content}) => {
   return (
@@ -39,7 +38,7 @@ const Card = ({title, content}) => {
 
 const Row = ({className}) => {
   return (
-    <div class={`section ${className}`}>
+    <div className={`section ${className}`}>
       <div className="grid grid-cols-1 lg:grid-cols-2 md:px-4 lg:px-6 gap-6 lg:gap-10">
         <Card
           title="Automate your delivery operations using RouteLift"
