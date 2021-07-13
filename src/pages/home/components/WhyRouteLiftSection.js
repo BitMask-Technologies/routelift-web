@@ -5,7 +5,7 @@ const row1 = [
     id: 11,
     title: "Automate your delivery operations using RouteLift",
     content:
-      "RouteLifft offers your business its route optimization algorithm to help you automate and scale your delivery operations to serve your customers more efficiently and maximize your profits.",
+      "RouteLift offers your business its route optimization algorithm to help you automate and scale your delivery operations to serve your customers more efficiently and maximize your profits.",
   },
   {
     id: 12,
@@ -65,7 +65,7 @@ const row5 = [
     id: 51,
     title: "Push Orders to the driver's app",
     content:
-      "Dispatch delivery routes straight to your drivers’ smartphones to keep your team organised and on track with a single click.",
+      "Dispatch delivery routes straight to your driver's smartphones to keep your team organised and on track with a single click.",
   },
   {
     id: 52,
@@ -84,7 +84,7 @@ const row6 = [
   },
   {
     id: 62,
-    title: "Integration your existing system via API",
+    title: "Integrate your existing system via API",
     content: "Import your orders directly into RouteLift with our API integration",
   },
 ];
