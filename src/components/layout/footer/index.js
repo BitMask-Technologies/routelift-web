@@ -19,7 +19,8 @@ const Column = ({title, links = [], isTargetLink = false, className}) => {
                 {link.linkName}
               </a>
             ) : (
-              <Link to={link.url}>{link.linkName}</Link>
+              // <Link to={link.url}>{link.linkName}</Link>
+              <Link to="/">{link.linkName}</Link>
             )}
           </li>
         ))}

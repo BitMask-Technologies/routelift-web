@@ -8,7 +8,7 @@ const NavItem = ({url, title}) => {
   return (
     <div className="md:block ">
       <Link
-        to={url}
+        to="/"
         className="ml-10 whitespace-nowrap text-base font-medium text-white hover:text-secondary"
       >
         {title}

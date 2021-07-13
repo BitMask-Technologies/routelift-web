@@ -1,5 +1,94 @@
 import React, {useEffect} from "react";
 
+const row1 = [
+  {
+    id: 11,
+    title: "Automate your delivery operations using RouteLift",
+    content:
+      "RouteLifft offers your business its route optimization algorithm to help you automate and scale your delivery operations to serve your customers more efficiently and maximize your profits.",
+  },
+  {
+    id: 12,
+    title: "Route Optimization",
+    content:
+      "Our route management solution optimizes your routes using real-world factors like vehicle capacities, delivery time windows, priority stops, driver speeds, delivery types, driver breaks, and so much more.",
+  },
+];
+
+const row2 = [
+  {
+    id: 21,
+    title: "Manage your records seamlessly",
+    content:
+      "No paper or misplaced records. Have access to all your customer and delivery records in one central place with daily automated backups to avoid loss.",
+  },
+  {
+    id: 22,
+    title: "Plan and optimise your delivery routes automatically",
+    content:
+      "Instantly get the most efficient routes and schedules for your drivers, plus increase the number of orders performed, while saving costs on fuel and time.",
+  },
+];
+
+const row3 = [
+  {
+    id: 31,
+    title: "Modify your delivery routes in realtime",
+    content:
+      "Insert last minute orders, adjust stop sequence or replan when the unexpected happens. Your Delivery Routes will automatically be recalculated to reflect the manual changes.",
+  },
+  {
+    id: 32,
+    title: "Notify your customers and Provide an order tracking link",
+    content:
+      "Send SMS messages or emails to customers informing them when the driver is scheduled to arrive with the option of sharing a live tracking link.",
+  },
+];
+
+const row4 = [
+  {
+    id: 41,
+    title: "Live Track your riders using GPS with ETA",
+    content:
+      "Track your driver's progress and get updated ETAs throughout the day. Don’t keep people waiting - give your customers more accurate ETAs.",
+  },
+  {
+    id: 42,
+    title: "Mobile App for Drivers",
+    content:
+      "Drivers can easily manage the complete route, delivery information and navigation all on their phones.",
+  },
+];
+
+const row5 = [
+  {
+    id: 51,
+    title: "Push Orders to the driver's app",
+    content:
+      "Dispatch delivery routes straight to your drivers’ smartphones to keep your team organised and on track with a single click.",
+  },
+  {
+    id: 52,
+    title: "Collect Proof of Delivery",
+    content:
+      "Capture signatures and photos using the driver app as your driver completes each delivery.",
+  },
+];
+
+const row6 = [
+  {
+    id: 61,
+    title: "Measure your success with our Delivery Analytics",
+    content:
+      "Analyse your delivery performance with reports automatically generated from your data.",
+  },
+  {
+    id: 62,
+    title: "Integration your existing system via API",
+    content: "Import your orders directly into RouteLift with our API integration",
+  },
+];
+
 const Card = ({title, content}) => {
   return (
     <div className="bg-primary px-8 py-10 rounded-lg flex flex-wrap space-y-6 md:space-y-0 md:space-x-8">
@@ -36,23 +125,13 @@ const Card = ({title, content}) => {
   );
 };
 
-const Row = ({className}) => {
+const Row = ({className, data}) => {
   return (
     <div className={`section ${className}`}>
       <div className="grid grid-cols-1 lg:grid-cols-2 md:px-4 lg:px-6 gap-6 lg:gap-10">
-        <Card
-          title="Automate your delivery operations using RouteLift"
-          content={`RouteLifft offers your business its route optimization algorithm to 
-    help you automate and scale your delivery operations to serve 
-    your customers more efficiently and maximize your profits.`}
-        />
-        <Card
-          title="Route Optimization"
-          content={`Our route management solution optimizes your routes using 
-    real-world factors like vehicle capacities, delivery time 
-    windows, priority stops, driver speeds, delivery types, 
-    driver breaks, and so much more.`}
-        />
+        {data.map((d) => (
+          <Card key={d?.id} title={d?.title} content={d?.content} />
+        ))}
       </div>
     </div>
   );
@@ -82,6 +161,7 @@ const WhyRouteLiftSection = () => {
       observer.observe(section);
     });
   }, []);
+
   return (
     <div className="container mx-auto px-4 main-why-section">
       <div className="relative mb-2 pt-2 pb-4 md:pt-10 md:pb-14">
@@ -91,12 +171,12 @@ const WhyRouteLiftSection = () => {
           </h3>
         </div>
         <div className="why-listing-section">
-          <Row className="section1" />
-          <Row className="section2" />
-          <Row className="section3" />
-          <Row className="section4" />
-          <Row className="section5" />
-          <Row className="section6" />
+          <Row className="section1" data={row1} />
+          <Row className="section2" data={row2} />
+          <Row className="section3" data={row3} />
+          <Row className="section4" data={row4} />
+          <Row className="section5" data={row5} />
+          <Row className="section6" data={row6} />
         </div>
       </div>
     </div>
