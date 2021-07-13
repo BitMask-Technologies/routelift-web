@@ -74,7 +74,6 @@ const WhyRouteLiftSection = () => {
         if (!entry.isIntersecting) {
           return;
         }
-        console.log(entry.target);
         entry.target.classList.add("show");
         observer.unobserve(entry.target);
       });
