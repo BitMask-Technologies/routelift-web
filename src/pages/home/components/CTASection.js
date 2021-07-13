@@ -5,9 +5,9 @@ import LinkButton from "../../../components/elements/LinkButton";
 
 const CTASection = () => {
   return (
-    <div className="container mx-auto px-4">
-      <div className="cta-section relative mb-12 md:mb-16 lg:mb-20 pt-4 pb-4 md:pt-10 md:pb-14 bg-primary rounded-lg">
-        <div className=" py-14 md:py-20 text-center mx-auto">
+    <div className="container mx-auto px-4 bg-white">
+      <div className="cta-section relative mb-12 md:mb-16 lg:mb-20 pt-4 pb-4 md:pt-10 md:pb-14 bg-primary rounded-lg ">
+        <div className=" px-6 py-14 md:py-20 text-center mx-auto">
           <Animate.Fade bottom>
             <h3 className="font-sans font-semibold text-2xl md:text-4xl lg:text-5xl text-white leading-7 pb-4">
               We’re launching soon!

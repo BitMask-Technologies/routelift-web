@@ -14,16 +14,56 @@
 }
 
 .top-section-bg {
-    background: linear-gradient(rgba(84, 0, 114, 0.98) 100%, rgba(84, 0, 114, 0.98) 100%),
+  background: linear-gradient(rgba(84, 0, 114, 0.98) 100%, rgba(84, 0, 114, 0.98) 100%),
     url("../images/png/patternwhite3.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .goodbye-text {
-    line-height: 1.5em !important;
+  line-height: 1.5em !important;
 }
 
 .customer-border {
   border: 1px solid rgba(84, 0, 114, 0.25);
+}
+
+.why-listing-section {
+  position:sticky;
+  top:0;
+  height: 65vh;
+  position: relative;
+  overflow: auto;
+}
+
+.why-listing-section .section{
+  overflow: hidden;
+  opacity: 0.5;
+  transform: scale(0.8);
+  transition: all ease-in-out 400ms;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.why-listing-section .section.show {
+  transform: scale(1);
+  opacity: 1;
+}
+
+@media screen and (max-width: 968px) {
+  .why-listing-section {
+    position:sticky;
+    top:0;
+    height: 100%;
+    position: relative;
+    overflow: auto;
+  }
+  .why-listing-section .section{
+    overflow: hidden;
+    opacity: 0.5;
+    transform: scale(0.8);
+    transition: all ease-in-out 400ms;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
 }
